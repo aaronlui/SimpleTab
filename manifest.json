@@ -1,0 +1,12 @@
+{
+  "name": "Simple Tab",
+  "description": "A simple tab page",
+  "version": "1.0",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "sandbox": {
+    "pages": ["index.html"]
+ }
+}
