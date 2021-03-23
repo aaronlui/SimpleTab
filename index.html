@@ -10,11 +10,23 @@
 </head>
 <body>
   <div id="app">
-    <div class="search-bar">
-      <input type="text" class="search-input">
+    <div class="background blur" style="background-image: url('bg/2405.jpeg')"></div>
+    <div class="content">
+      <div class="search-bar">
+        <input v-model="query" type="text" class="search-input" placeholder="Search" @keyup.enter="search">
+      </div>
+
+      <div class="fav-list">
+        <a class="fav-box" v-for="item in favList" :href="item.url">
+          <!-- <img class="icon" :src="item.url + '/favicon.ico'"> -->
+          <div class="icon">{{item.title.substring(0,2)}}</div>
+          <p class="title">{{item.title}}</p>
+        </a>
+      </div>
     </div>
   </div>
-  <script src="./Vue.js"></script>
-  <script src="./app.js"></script>
+
+  <script src="lib/Vue.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
